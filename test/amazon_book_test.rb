@@ -1,10 +1,10 @@
 require 'test_helper'
-require 'amazon_page_parser'
+require 'amazon_book'
 
-class AmazonPageParserTest < Test::Unit::TestCase
+class AmazonBookTest < Test::Unit::TestCase
   def setup
     @html = File.read(File.expand_path("../fixtures/vanishing-point-amazon-page.html", __FILE__))
-    @book = AmazonPageParser.new(@html).book
+    @book = AmazonBook.new(@html)
   end
 
   def test_should_parse_the_book_title

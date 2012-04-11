@@ -6,7 +6,7 @@ require 'bundler/setup'
 require 'haml'
 
 require 'open-uri'
-require 'amazon_page_parser'
+require 'amazon_book'
 
 unless html_source = ARGV.shift
   puts "Usage: #{__FILE__} html-source"
@@ -15,7 +15,7 @@ unless html_source = ARGV.shift
 end
 
 html = open(html_source)
-book = AmazonPageParser.new(html).book
+book = AmazonBook.new(html)
 
 bookmark_template = File.read("templates/bookmark.html.haml")
 engine = Haml::Engine.new(bookmark_template)
