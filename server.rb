@@ -6,7 +6,17 @@ require 'sinatra'
 require 'amazon_book'
 
 get '/' do
-  "Demo bookmarks service for http://printer.gofreerange.com"
+  haml :index
+end
+
+get '/bookmarks/new' do
+  haml :new
+end
+
+post '/bookmarks' do
+  bookmark_url = "http://" + env["SERVER_NAME"] + "/bookmark?url=" + params[:amazon_url]
+  print_url    = params[:printer_url] + "?url=" + bookmark_url
+  redirect print_url
 end
 
 get '/bookmark' do

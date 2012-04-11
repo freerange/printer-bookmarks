@@ -19,6 +19,8 @@ GEM
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
+    rack-test (0.6.1)
+      rack (>= 1.0)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubyzip (0.9.6.1)
@@ -40,5 +42,6 @@ DEPENDENCIES
   heroku
   mocha
   nokogiri
+  rack-test
   sinatra
   webmock

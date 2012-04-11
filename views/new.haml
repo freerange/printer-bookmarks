@@ -1,0 +1,13 @@
+%h1 Print a bookmark
+
+%form{:action => '/bookmarks', :method => 'post'}
+  %p
+    %label{:for => 'amazon_url'} Amazon URL
+    %br
+    %input{:type => 'text', :name => 'amazon_url', id: 'amazon_url'}
+  %p
+    %label{:for => 'printer_url'} Printer URL
+    %br
+    %input{:type => 'text', :name => 'printer_url', id: 'printer_url'}
+  %p
+    %input{:type => 'submit', :value => 'Create bookmark'}

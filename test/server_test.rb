@@ -21,4 +21,11 @@ class ServerTest < Test::Unit::TestCase
     assert_equal "Vanishing Point [Paperback]", doc.at("#book-title").inner_text
     assert_equal "http://ecx.images-amazon.com/images/I/515W2DBJURL._SL500_AA240_.jpg", doc.at("#cover-image").attributes['src'].value
   end
+
+  def test_bookmark_printing
+    post '/bookmarks', printer_url: 'http://printer.example.com', amazon_url: 'amazon.example.com'
+
+    assert_equal 302, last_response.status
+    assert_equal "http://printer.example.com?url=http://example.org/bookmark?url=amazon.example.com", last_response.headers["Location"]
+  end
 end
