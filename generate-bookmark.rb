@@ -5,7 +5,6 @@ $LOAD_PATH << File.expand_path("../lib/", __FILE__)
 require 'bundler/setup'
 require 'haml'
 
-require 'open-uri'
 require 'amazon_book'
 
 unless html_source = ARGV.shift
@@ -14,8 +13,7 @@ unless html_source = ARGV.shift
   exit 1
 end
 
-html = open(html_source)
-book = AmazonBook.new(html)
+book = AmazonBook.from_external_source(html_source)
 
 bookmark_template = File.read("templates/bookmark.html.haml")
 engine = Haml::Engine.new(bookmark_template)
