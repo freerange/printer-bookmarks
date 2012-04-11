@@ -1,0 +1,12 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    haml (3.1.4)
+    nokogiri (1.5.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  haml
+  nokogiri
