@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 
+$LOAD_PATH << File.expand_path("../lib/", __FILE__)
+
 require 'bundler/setup'
-require 'nokogiri'
 require 'haml'
 
 require 'open-uri'
+require 'amazon_page_parser'
 
 unless html_source = ARGV.shift
   puts "Usage: #{__FILE__} html-source"
@@ -13,10 +15,7 @@ unless html_source = ARGV.shift
 end
 
 html = open(html_source)
-doc = Nokogiri::HTML(html)
-
-book_title = (doc/"#btAsinTitle").first.inner_text
-cover_image_url = (doc/"#prodImage").first.attributes["src"].value
+book = AmazonPageParser.new(html).book
 
 bookmark_template = File.read("templates/bookmark.html.haml")
 engine = Haml::Engine.new(bookmark_template)
