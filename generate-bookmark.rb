@@ -15,6 +15,6 @@ end
 
 book = AmazonBook.from_external_source(html_source)
 
-bookmark_template = File.read("templates/bookmark.html.haml")
+bookmark_template = File.read("templates/bookmark.haml")
 engine = Haml::Engine.new(bookmark_template)
 puts engine.render(binding)
