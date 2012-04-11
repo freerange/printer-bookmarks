@@ -11,8 +11,8 @@ class AmazonBookHappyPathTest < Test::Unit::TestCase
     assert_equal "Vanishing Point", @book.title
   end
 
-  def test_should_parse_the_cover_image_url
-    assert_equal "http://ecx.images-amazon.com/images/I/515W2DBJURL._SL500_AA240_.jpg", @book.cover_image_url
+  def test_should_parse_the_cover_image_url_and_find_the_full_size_version
+    assert_equal "http://ecx.images-amazon.com/images/I/515W2DBJURL.jpg", @book.cover_image_url
   end
 end
 

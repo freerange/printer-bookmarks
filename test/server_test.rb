@@ -19,7 +19,7 @@ class ServerTest < Test::Unit::TestCase
 
     doc = Nokogiri::HTML(last_response.body)
     assert_equal "Vanishing Point", doc.at("#book-title").inner_text
-    assert_equal "http://ecx.images-amazon.com/images/I/515W2DBJURL._SL500_AA240_.jpg", doc.at("#cover-image").attributes['src'].value
+    assert_equal "http://ecx.images-amazon.com/images/I/515W2DBJURL.jpg", doc.at("#cover-image").attributes['src'].value
   end
 
   def test_bookmark_printing
