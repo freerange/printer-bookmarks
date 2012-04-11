@@ -1,9 +1,5 @@
 * Add author to the bookmark
 
-* Remove the [format] from the book title (e.g. "Twenty Twelve [Paperback]" should just be "Twenty Twelve")
-
-* Use the best image available, e.g. this image (http://ecx.images-amazon.com/images/I/519FBBcSjsL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA240_SH20_OU02_.jpg) is available as a full size image, without the "look inside" arrow, at http://ecx.images-amazon.com/images/I/519FBBcSjsL.jpg
-
 * Add a README
 
 * Increase the size of the font used for the "Started", "Finished" and "Notes" headings
@@ -12,4 +8,6 @@
 
 * Add something useful at the root of the app
 
-* Add a form so that I can enter an Amazon page URL and printer URL and have it printed immediately
+* Use external stylesheet to avoid cluttering layout
+
+* Use sass rather than plain old css
