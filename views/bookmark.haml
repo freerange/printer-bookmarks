@@ -1,5 +1,9 @@
-%img#cover-image{:src => book.cover_image_url}
-%h1#book-title= book.title
+#cover-and-title
+  #title-container
+    %h1#book-title= book.title
+  #cover-container
+    %img#cover-image{:src => book.cover_image_url}
+%hr
 %h3 Started:
 %h3 Finished:
 %h3 Notes
