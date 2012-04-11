@@ -18,7 +18,7 @@ class ServerTest < Test::Unit::TestCase
     get '/bookmark', url: 'http://example.com'
 
     doc = Nokogiri::HTML(last_response.body)
-    assert_equal "Vanishing Point [Paperback]", doc.at("#book-title").inner_text
+    assert_equal "Vanishing Point", doc.at("#book-title").inner_text
     assert_equal "http://ecx.images-amazon.com/images/I/515W2DBJURL._SL500_AA240_.jpg", doc.at("#cover-image").attributes['src'].value
   end
 

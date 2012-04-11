@@ -12,7 +12,12 @@ class AmazonBook
   def initialize(html)
     doc = Nokogiri::HTML(html)
     title_element = doc.at("#btAsinTitle")
-    @title = title_element ? title_element.inner_text : ""
+    @title = if title_element
+      title_element.at("span").remove # Remove the format from the title
+      title_element.inner_text.strip
+    else
+      ""
+    end
     cover_image_url_element = doc.at("#prodImage")
     @cover_image_url = cover_image_url_element ? cover_image_url_element.attributes["src"].value : ""
   end

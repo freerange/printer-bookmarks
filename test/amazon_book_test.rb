@@ -7,8 +7,8 @@ class AmazonBookHappyPathTest < Test::Unit::TestCase
     @book = AmazonBook.new(html)
   end
 
-  def test_should_parse_the_book_title
-    assert_equal "Vanishing Point [Paperback]", @book.title
+  def test_should_parse_the_book_title_and_ignore_the_format
+    assert_equal "Vanishing Point", @book.title
   end
 
   def test_should_parse_the_cover_image_url
