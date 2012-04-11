@@ -9,3 +9,5 @@ I used cURL to download an amazon book page so that I could play around with ext
      curl "http://www.amazon.co.uk/Vanishing-Point-Danielle-Ramsay/dp/1847562337/ref=tmm_pap_title_0" -L > examples/vanishing-point-amazon-page.html
 
 After playing around a little I was able to create a script (generate-bookmark.rb) that took the URL of an Amazon book page, or the location of a local file, and emit the html of a simple bookmark.
+
+The next step is to create a simple web interface that allows the bookmarks to be generated and, finally, printed.
