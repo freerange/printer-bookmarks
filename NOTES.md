@@ -19,3 +19,5 @@ I've now got my sinatra app that allows me to dynamically generate bookmarks for
 I've also got the app deployed to heroku at http://printer-bookmarks.heroku.com/
 
 Now I need to make the bookmark a little more printer friendly.
+
+Although I've copied the layout from printer-mail it doesn't look great when it's printed.  The normal fonts are too small and the page isn't long enough.
