@@ -5,8 +5,6 @@ require 'sinatra'
 
 require 'amazon_book'
 
-set :views, settings.root + '/templates'
-
 get '/' do
   "Demo bookmarks service for http://printer.gofreerange.com"
 end
