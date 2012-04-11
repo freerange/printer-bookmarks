@@ -4,8 +4,15 @@
   %head
     %link{:rel => "stylesheet", :href => "http://printer.gofreerange.com/stylesheets/print.css", :type => "text/css", :media => "screen", :charset => "utf-8"}
     :css
+      label {
+        font-weight: bold;
+      }
       input[type=text] {
         width: 370px;
+      }
+      .hint {
+        font-size: 90%;
+        color: #444;
       }
   %body.preview
     .paper

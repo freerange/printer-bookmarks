@@ -5,9 +5,17 @@
     %label{:for => 'amazon_url'} Amazon URL
     %br
     %input{:type => 'text', :name => 'amazon_url', id: 'amazon_url'}
+    %br
+    %span.hint This is the URL of the Amazon page showing the book you're currently reading.
   %p
     %label{:for => 'printer_url'} Printer URL
     %br
     %input{:type => 'text', :name => 'printer_url', id: 'printer_url'}
+    %br
+    %span.hint This is the URL of your printer.
   %p
     %input{:type => 'submit', :value => 'Create bookmark'}
+    %br
+    %p.hint
+      %strong NOTE.
+      You'll be redirected to your backend printer server as soon as you hit 'Create bookmark'.
