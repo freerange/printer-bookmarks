@@ -1,5 +1,36 @@
-%h1 Print bookmarks for the books you're reading
+%h1 Printer Bookmarks
 
-Go ahead, 
-%a{:href => '/bookmarks/new'} print a bookmark
-why not.
+%p
+  (A demo
+  %a{:href => 'http://printer.gofreerange.com'} Printer
+  application)
+
+%p Print splendid little bookmarks for the books you're reading
+
+%h2 To view a bookmark
+
+%ol
+  %li
+    Find the book you're reading on
+    %a{:href => "http://www.amazon.co.uk"} Amazon
+  %li
+    Copy the URL of that page and paste it into the box below.
+  %li
+    Hit "View bookmark"
+
+%form{:action => "bookmark", :method => "get"}
+  %p
+    %label{:for => "amazon_url"} Amazon URL
+    %input{:type => "text", :name => "url", :id => "amazon_url"}
+  %p
+    %input{:type => "submit", :value => "View bookmark"}
+
+%h2 To print a bookmark
+
+%p
+  %strong NOTE.
+  You'll need to know the URL of the printer that you're going to print to for this to be useful.
+
+%p
+  If you've got a printer and you're ready to print your bookmark,
+  %a{:href => '/bookmarks/new'} head right this way.
