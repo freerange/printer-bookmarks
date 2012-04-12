@@ -1,10 +1,10 @@
-#cover-and-title
-  #title-container
-    %h1#book-title= book.title
+%h1#book-title= book.title
+#cover-and-info
   #cover-container
     %img#cover-image{:src => book.cover_image_url}
+  #info-container
+    %h3 Started
+    %h3 Finished
 %hr
-%h3 Started:
-%h3 Finished:
-%h3 Notes
 #notes
+  %h3 Notes

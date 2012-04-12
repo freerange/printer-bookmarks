@@ -4,6 +4,13 @@
   %head
     %link{:rel => "stylesheet", :href => "http://printer.gofreerange.com/stylesheets/print.css", :type => "text/css", :media => "screen", :charset => "utf-8"}
     :css
+      .content {
+        border: 2px solid #000;
+        padding: 10px;
+      }
+      hr {
+        border-width: 2px;
+      }
       label {
         font-weight: bold;
       }
@@ -15,20 +22,25 @@
         color: #444;
       }
       #notes {
-        min-height: 300px;
+        min-height: 500px;
       }
-      #cover-and-title {
+      #cover-and-info {
         overflow: auto;
       }
-      #cover-container, #title-container {
+      #cover-container, #info-container {
         width: 50%;
         float: left;
       }
       #cover-image {
         width: 100%;
       }
-      #title-container h1 {
+      h1 {
         margin-top: 0;
+      }
+      #info-container h3 {
+        margin-top: 0;
+        margin-bottom: 100px;
+        margin-left: 20px;
       }
   %body.preview
     .paper
