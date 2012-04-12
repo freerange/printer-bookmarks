@@ -22,6 +22,20 @@ class ServerTest < Test::Unit::TestCase
     assert_equal "http://ecx.images-amazon.com/images/I/515W2DBJURL.jpg", doc.at("#cover-image").attributes['src'].value
   end
 
+  def test_bookmark_generation_when_the_url_is_empty
+    get '/bookmark', url: ''
+
+    doc = Nokogiri::HTML(last_response.body)
+    assert_match /It looks like the URL of the Amazon page is missing/, doc.at("#error").inner_text
+  end
+
+  def test_bookmark_generation_when_the_url_is_missing
+    get '/bookmark'
+
+    doc = Nokogiri::HTML(last_response.body)
+    assert_match /It looks like the URL of the Amazon page is missing/, doc.at("#error").inner_text
+  end
+
   def test_bookmark_printing
     post '/bookmarks', printer_url: 'http://printer.example.com', amazon_url: 'amazon.example.com'
 

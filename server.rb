@@ -20,6 +20,10 @@ post '/bookmarks' do
 end
 
 get '/bookmark' do
-  book = AmazonBook.from_external_source(params[:url])
-  haml :bookmark, locals: {book: book}
+  if params[:url].nil? || params[:url] == ""
+    haml :bookmark_error
+  else
+    book = AmazonBook.from_external_source(params[:url])
+    haml :bookmark, locals: {book: book}
+  end
 end
