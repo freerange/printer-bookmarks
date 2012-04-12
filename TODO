@@ -4,6 +4,4 @@
 
 * Increase the length of the printout
 
-* Use external stylesheet to avoid cluttering layout
-
 * Use sass rather than plain old css
