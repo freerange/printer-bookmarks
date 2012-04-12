@@ -1,3 +1,5 @@
+* Ensure the app doesn't explode if no URL is provided to the preview.
+
 * Add author to the bookmark
 
 * Add a README
