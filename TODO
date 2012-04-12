@@ -1,12 +1,10 @@
 * Add author to the bookmark
 
-* Add a README
+* Improve README
 
 * Increase the size of the font used for the "Started", "Finished" and "Notes" headings
 
 * Increase the length of the printout
-
-* Add something useful at the root of the app
 
 * Use external stylesheet to avoid cluttering layout
 
