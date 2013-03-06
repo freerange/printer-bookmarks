@@ -9,4 +9,4 @@ This app makes it really easy to print a bookmark for the book you're currently 
 [Printer paint]: https://github.com/freerange/printer-paint
 [Printer weather]: https://github.com/freerange/printer-weather
 [printer-bookmarks]: http://printer-bookmarks.heroku.com
-[example bookmark for The Snow Child]: http://printer-bookmarks.dev/images/the-snow-child-bookmark.jpg
+[example bookmark for The Snow Child]: http://printer-bookmarks.heroku.com/images/the-snow-child-bookmark.jpg
